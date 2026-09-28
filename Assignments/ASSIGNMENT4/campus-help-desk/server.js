@@ -1,13 +1,15 @@
-const express = require("express");
-const fs = require("fs");
-const path = require("path");
+import express from "express";
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
 
 const app = express();
-const PORT = 3000;
-const file = path.join(__dirname, "requests.json");
+const PORT = process.env.PORT || 3000;
+const projectDir = path.dirname(fileURLToPath(import.meta.url));
+const file = path.join(projectDir, "requests.json");
 
 app.use(express.json());
-app.use(express.static("public"));
+app.use(express.static(path.join(projectDir, "public")));
 
 function readRequests() {
   return JSON.parse(fs.readFileSync(file, "utf8"));

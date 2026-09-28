@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Mini Project - Campus Help Desk",
   "main": "server.js",
+  "type": "module",
   "scripts": {
     "start": "node server.js"
   },
