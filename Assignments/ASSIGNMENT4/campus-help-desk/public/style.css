@@ -1,0 +1,57 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  margin: 0;
+  padding: 30px;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+form {
+  display: grid;
+  gap: 10px;
+}
+
+input, select, textarea, button {
+  padding: 10px;
+  font-size: 15px;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+button {
+  border: 0;
+  background: #222;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.cancel {
+  display: none;
+  background: #777;
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 8px;
+}
+
+.actions button {
+  margin-right: 8px;
+  margin-top: 8px;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Help Desk</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Campus Help Desk</h1>
+
+    <form id="requestForm">
+      <input type="hidden" id="requestId">
+
+      <input type="text" id="name" placeholder="Student Name" required>
+      <input type="email" id="email" placeholder="Email" required>
+
+      <select id="category" required>
+        <option value="">Select Category</option>
+        <option>Classroom</option>
+        <option>Hostel</option>
+        <option>Library</option>
+        <option>Transport</option>
+        <option>Other</option>
+      </select>
+
+      <textarea id="description" placeholder="Problem Description" required></textarea>
+
+      <select id="priority" required>
+        <option value="">Select Priority</option>
+        <option>Low</option>
+        <option>Medium</option>
+        <option>High</option>
+      </select>
+
+      <button type="submit">Submit Request</button>
+      <button type="button" id="cancelBtn" class="cancel">Cancel Edit</button>
+    </form>
+
+    <h2>Submitted Requests</h2>
+    <div id="requestList"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
